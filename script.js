@@ -19,3 +19,17 @@ function randomBackgr() {
 randomBackgr();
 
 // Landing Page --------------------- ---------------------
+
+// --------------------- Our Skills Section ---------------------
+const ourSkills = document.querySelector(".skills");
+const skillProgress = document.querySelectorAll(".skill-progress span");
+let skillsOffsetTop = ourSkills.offsetTop;
+
+window.onscroll = () => {
+  if (this.scrollY >= skillsOffsetTop) {
+    skillProgress.forEach((element) => {
+      element.style.width = element.dataset.progress;
+    });
+  }
+};
+// Our Skills Section --------------------- ---------------------
