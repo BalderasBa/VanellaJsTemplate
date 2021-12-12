@@ -1,6 +1,17 @@
 :root {
   --color-main: #ff9800;
+  --color-bgDark: rgb(236, 238, 214);
+  --color-bgLight: #eee;
+  --color-bgDark: #444;
+  --color-text: #666;
+
+  --padding-section8: 80px;
+  --padding-section5: 50px;
+
+  --shadow-images: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
   --transotion-main: 500ms;
+  --transotion-second: 300ms;
 }
 * {
   box-sizing: border-box;
@@ -17,6 +28,26 @@ body {
 .container {
   padding: 0 1rem;
   margin: auto;
+}
+/* use this  */
+.section-title {
+  color: var(--color-main);
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 auto 50px;
+  text-align: center;
+  user-select: none;
+  padding: 1rem 3rem;
+  box-shadow: -1px 1px 5px -3px #000;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: var(--color-main);
+  color: #fff;
+  padding: 7.5px 15px;
+  cursor: pointer;
 }
 /* --------------------- Landing Page ---------------------  */
 .landing-page {
@@ -87,3 +118,72 @@ body {
 }
 
 /* Landing Page --------------------- --------------------- */
+/* --------------------- About Section --------------------- */
+.about-us {
+  padding-top: var(--padding-section5);
+  padding-bottom: var(--padding-section5);
+  display: flex;
+  align-items: center;
+}
+.about-us .info-box {
+  flex: 1;
+  padding: 30px;
+}
+.about-us .info-box h2 {
+  color: var(--color-main);
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+.about-us .info-box P {
+  line-height: 1.8;
+  color: #767676;
+  margin: 0;
+}
+.about-us .image-box {
+  flex: 1;
+  text-align: center;
+}
+.about-us .image-box img {
+  max-width: 250px;
+}
+
+/* About Section --------------------- --------------------- */
+/* --------------------- Our Skills Section --------------------- */
+.skills {
+  padding-top: var(--padding-section5);
+  padding-bottom: var(--padding-section5);
+  background-color: #eee;
+}
+.skills .skill-box {
+  background-color: #fff;
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.skills .skill-box .skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  line-height: 30px;
+}
+.skills .skill-box .skill-progress {
+  background-color: rgb(248, 248, 248);
+  height: 30px;
+  width: calc(100% - 150px);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.skills .skill-box .skill-progress span {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-main);
+  transition: all var(--transotion-main);
+}
+
+/* Our Skills Section --------------------- --------------------- */
