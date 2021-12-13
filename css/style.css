@@ -359,3 +359,232 @@ body {
   z-index: 3;
 }
 /* Time Line Section --------------------- --------------------- */
+/* --------------------- Our Features Section --------------------- */
+.features {
+  padding-top: var(--padding-section8);
+  padding-bottom: var(--padding-section5);
+  background-color: rgb(236, 238, 214);
+}
+.features .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.features .feat-box {
+  width: calc(100% / 3);
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features .feat-box img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--color-main);
+  border-radius: 50%;
+  padding: 5px;
+}
+.features .feat-box h4 {
+  font-size: 22px;
+  position: relative;
+  margin: 20px auto 40px;
+}
+.features .feat-box h4::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-main);
+}
+.features .feat-box p {
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+/* Our Features Section --------------------- --------------------- */
+/* --------------------- Testimonials Section --------------------- */
+.testimonials {
+  padding-top: var(--padding-section5);
+  padding-bottom: var(--padding-section5);
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
+}
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--color-main);
+}
+.testimonials::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+}
+.testimonials h2 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.testimonials .testimo-box {
+  position: relative;
+  z-index: 2;
+  width: calc(98% / 3);
+  float: left;
+  background-color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.testimonials .testimo-box:not(:last-of-type) {
+  margin-right: 1%;
+}
+.testimonials .testimo-box > p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--color-text);
+}
+.testimonials .testimo-box .tperson-info {
+  overflow: hidden;
+}
+.testimonials .testimo-box .tperson-info img {
+  border-radius: 50%;
+}
+.testimonials .testimo-box .tperson-info h4 {
+  margin: 15px 0 10px;
+}
+.testimonials .testimo-box .tperson-info p {
+  color: var(--color-text);
+  margin: 0;
+}
+/* Testimonials Section --------------------- --------------------- */
+/* --------------------- Contact Us ---------------------  */
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 600px;
+  background-image: url(../images/contactus.png);
+  background-size: cover;
+  position: relative;
+}
+.contact .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255 255 255 / 60%);
+}
+.contact .container {
+  z-index: 2;
+  position: relative;
+}
+.contact form {
+  overflow: hidden;
+  max-width: 800px;
+  margin: auto;
+}
+.contact form .left {
+  float: left;
+  width: 47%;
+}
+.contact form .right {
+  float: right;
+  width: 47%;
+}
+.contact form input:not([type="submit"]),
+.contact form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background-color: rgba(218, 218, 218, 0.2);
+  caret-color: var(--color-main);
+  height: 40px;
+}
+.contact form input:not([type="submit"]):focus,
+.contact form textarea:focus {
+  outline: 1px solid var(--color-main);
+}
+.contact form textarea {
+  height: 150px;
+}
+.contact form input[type="submit"] {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--color-main);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: var(--transotion-second);
+  height: 40px;
+}
+.contact form input[type="submit"]:hover {
+  background-color: #fff;
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+  transform: translateY(-2px);
+}
+.contact form textarea:focus::-webkit-input-placeholder,
+.contact form textarea:focus::-ms-input-placeholder,
+.contact form textarea:focus::placeholder {
+  opacity: 0;
+  transition: var(--transotion-second);
+}
+::placeholder {
+  color: var(--color-main);
+  opacity: 0.7;
+}
+/* Contact Us --------------------- ---------------------  */
+/* --------------------- Grid System ---------------------  */
+@media (min-width: 576px) {
+  .container {
+    max-width: 550px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 740px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1150px;
+  }
+}
+/* Grid System --------------------- ---------------------  */
+/* --------------------- footer --------------------- */
+footer {
+  padding: 20px 0;
+  background-color: var(--color-bgDark);
+  text-align: center;
+  color: #fff;
+}
+footer span {
+  color: var(--color-main);
+}
+/* footer --------------------- --------------------- */
