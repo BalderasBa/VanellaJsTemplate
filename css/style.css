@@ -41,13 +41,31 @@ body {
   width: fit-content;
   border-radius: 10px;
 }
-
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 25px;
+  }
+}
 .btn {
   background-color: var(--color-main);
   color: #fff;
   padding: 7.5px 15px;
   cursor: pointer;
 }
+/* --------------------- Custom Scroll Bar --------------------- */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-bgLight);
+  box-shadow: 0 0 5px rgb(204, 204, 204) inset;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-main);
+  border-radius: 5px;
+}
+/* Custom Scroll Bar --------------------- --------------------- */
 /* --------------------- Settigns Box --------------------- */
 .settings-box {
   position: fixed;
@@ -145,6 +163,20 @@ body {
   opacity: 1;
   border: 2px solid #fff;
 }
+/* --------------------- Reset Options */
+.settings-box .reset-option {
+  color: #fff;
+  background-color: #ff5800;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+/* settings-box --------------------- --------------------- */
 /* --------------------- Navigation Bullets --------------------- */
 .nav-bullets {
   position: fixed;
@@ -246,6 +278,43 @@ body {
 .header-area .links li:hover a,
 .header-area .links .active {
   color: var(--color-main);
+}
+/* Toggle Menu */
+.header-area .toggle-menu.menu-active::before {
+  content: "\f0de";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: -35px;
+  font-size: xx-large;
+  color: #fff;
+}
+.header-area .toggle-menu {
+  background: none;
+  border: none;
+  width: 30px;
+  cursor: pointer;
+  display: none;
+  margin-top: auto;
+  position: relative;
+}
+.header-area .toggle-menu span {
+  display: block;
+  background-color: #fff;
+  height: 3px;
+  margin-bottom: 5px;
+}
+.landing-page .introduction {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  width: 90%;
 }
 
 .introduction h1 {
