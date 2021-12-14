@@ -48,6 +48,47 @@ body {
   padding: 7.5px 15px;
   cursor: pointer;
 }
+/* --------------------- Settigns Box --------------------- */
+.settings-box {
+  position: fixed;
+  left: -200px;
+  bottom: 0;
+  background-color: #fff;
+  width: 200px;
+  min-height: 80vh;
+  z-index: 344;
+  transition: var(--transotion-main);
+  border-top-right-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.settings-box.open {
+  left: 0;
+}
+.settings-box .gear-toggle {
+  position: absolute;
+  right: -30px;
+  top: 40px;
+  background-color: #fff;
+  width: 30px;
+  padding: 8px 0;
+  text-align: center;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.settings-box .option-box {
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px;
+}
+.settings-box .option-box h4 {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+}
 /* --------------------- Navigation Bullets --------------------- */
 .nav-bullets {
   position: fixed;
