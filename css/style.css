@@ -155,6 +155,12 @@ body {
   font-size: 35px;
   margin: 0 0 12px;
 }
+
+@media (max-width: 575px) {
+  .introduction h1 {
+    font-size: 25px;
+  }
+}
 .introduction h1 span {
   color: var(--color-main);
 }
@@ -163,7 +169,31 @@ body {
   font-size: 20px;
   margin: 0;
 }
-
+@media (max-width: 991px) {
+  .header-area .links {
+    display: none;
+  }
+  .header-area .links.open {
+    background-color: #fff;
+    padding: 20px;
+    display: block;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    /* z-index: 1; */
+  }
+  .header-area .links.open li {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .header-area .links.open li a {
+    color: var(--color-main);
+    font-weight: bold;
+  }
+}
 /* Landing Page --------------------- --------------------- */
 /* --------------------- About Section --------------------- */
 .about-us {
@@ -194,7 +224,25 @@ body {
 .about-us .image-box img {
   max-width: 250px;
 }
+@media (max-width: 767px) {
+  .about-us {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+  }
+  .about-us P {
+    text-align: justify;
+  }
 
+  .about-us .image-box img {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+  }
+}
 /* About Section --------------------- --------------------- */
 /* --------------------- Our Skills Section --------------------- */
 .skills {
@@ -232,7 +280,22 @@ body {
   background-color: var(--color-main);
   transition: all var(--transotion-main);
 }
+@media (max-width: 767px) {
+  .skills .skill-box {
+    display: block;
+    padding: 10px;
+  }
+  .skills .skill-box .skill-name {
+    width: 100%;
+  }
+  .skills .skill-box .skill-progress {
+    width: 100%;
+  }
 
+  .skills .skill-box .skill-progress {
+    width: 100%;
+  }
+}
 /* Our Skills Section --------------------- --------------------- */
 /* --------------------- Our Gallery Section ---------------------  */
 .gallery {
@@ -268,6 +331,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
+  /* width: 500px; */
   transform: translate(-50%, -50%);
   background-color: #fff;
   border: 1px solid #ccc;
@@ -382,6 +446,7 @@ body {
   line-height: 1.6;
 }
 .clearfix {
+  /* si un élément peut être situé à côté d'éléments flottants qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments. */
   clear: both;
 }
 .timeline .timeline-content .left .content::before {
@@ -406,6 +471,19 @@ body {
   color: #fff;
   z-index: 3;
 }
+@media (max-width: 767px) {
+  .timeline .timeline-content .left,
+  .timeline .timeline-content .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .timeline .timeline-content .right::before,
+  .timeline .timeline-content .left::before,
+  .timeline .timeline-content .right .content::before,
+  .timeline .timeline-content .left .content::before {
+    display: none;
+  }
+}
 /* Time Line Section --------------------- --------------------- */
 /* --------------------- Our Features Section --------------------- */
 .features {
@@ -424,6 +502,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .features .feat-box {
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 767px) {
+  .features .feat-box {
+    width: 100%;
+  }
 }
 .features .feat-box img {
   width: 100px;
@@ -521,6 +609,19 @@ body {
   color: var(--color-text);
   margin: 0;
 }
+@media (max-width: 991px) {
+  .testimonials .testimo-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .testimonials .testimo-box .tperson-info img {
+    float: left;
+    margin-right: 20px;
+  }
+  .testimonials .testimo-box {
+    text-align: start;
+  }
+}
 /* Testimonials Section --------------------- --------------------- */
 /* --------------------- Contact Us ---------------------  */
 .contact {
@@ -601,6 +702,13 @@ body {
 ::placeholder {
   color: var(--color-main);
   opacity: 0.7;
+}
+@media (max-width: 767px) {
+  .contact form .left,
+  .contact form .right {
+    float: none;
+    width: 100%;
+  }
 }
 /* Contact Us --------------------- ---------------------  */
 /* --------------------- Grid System ---------------------  */
