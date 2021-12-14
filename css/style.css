@@ -89,6 +89,62 @@ body {
   color: #666;
   font-size: 15px;
 }
+.settings-box .option-box .colors-list {
+  text-align: center;
+  padding: 0;
+  margin: 10px 0 0;
+}
+.settings-box .option-box .colors-list li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+  opacity: 0.5;
+  display: inline-block;
+  margin-left: 3px;
+}
+.settings-box .option-box .colors-list li:hover,
+.settings-box .option-box .colors-list li.active {
+  opacity: 1;
+  transform: scale(1.3);
+  border: 2px solid #fff;
+}
+.settings-box .option-box .colors-list li:first-child {
+  background-color: #ff9800;
+}
+.settings-box .option-box .colors-list li:nth-child(2) {
+  background-color: #fd0658;
+}
+.settings-box .option-box .colors-list li:nth-child(3) {
+  background-color: #4caf50;
+}
+.settings-box .option-box .colors-list li:nth-child(4) {
+  background-color: #9c27b0;
+}
+.settings-box .option-box .colors-list li:last-child {
+  background-color: #1db4fa;
+}
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
+  width: 50px;
+  color: #000;
+  background-color: var(--color-main);
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 4px 10px;
+  opacity: 0.5;
+  transition: var(--transotion-second);
+  cursor: pointer;
+}
+.settings-box .option-box span:hover,
+.settings-box .option-box span.active {
+  opacity: 1;
+  border: 2px solid #fff;
+}
 /* --------------------- Navigation Bullets --------------------- */
 .nav-bullets {
   position: fixed;
