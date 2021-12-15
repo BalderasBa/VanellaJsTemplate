@@ -256,6 +256,9 @@ body {
 .header-area .logo {
   width: 300px;
   padding: 1rem;
+  cursor: pointer;
+}
+.header-area .logo a {
   font-weight: bold;
   color: var(--color-main);
 }
