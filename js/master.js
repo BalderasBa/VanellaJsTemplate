@@ -14,15 +14,28 @@ window.addEventListener("keyup", (e) => {
     gearI.classList.toggle("fa-spin");
   }
 });
+/* if user click not on settingsBox toggele and if it's open 
+settingsBox.addEventListener("click", (e) => {
+  if (settingsBox.classList.contains("open") && e.target) {
+    console.log("win clicked");
+    console.log(e.target);
+    // settingsBox.classList.toggle("open");
+    // gearI.classList.toggle("fa-spin");
+  }
+});
+*/
 // --------------------- Switch Colors
 const colorsList = document.querySelectorAll(".colors-list li");
 const colorsListLS = localStorage.getItem("colorsOption");
 
+// check color in localStorage
 if (colorsListLS) {
   document.documentElement.style.setProperty("--color-main", colorsListLS);
+  // remove active class from all li:
   colorsList.forEach((elem) => {
     elem.classList.remove("active");
 
+    // add active class with Data-color from localStorage
     if (elem.dataset.color === colorsListLS) {
       elem.classList.add("active");
     }
@@ -44,6 +57,7 @@ colorsList.forEach((li) => {
 });
 // Switch Colors ---------------------
 // --------------------- Switch Random Background
+// random background option
 let backgroundOption = true;
 let theInterval;
 
@@ -51,9 +65,11 @@ let theInterval;
 let backgroundLocalItem = localStorage.getItem("backgroundOption");
 if (backgroundLocalItem) {
   backgroundOption = backgroundLocalItem;
+  //remove active classes
   document.querySelectorAll(".random-back span").forEach((element) => {
     element.classList.remove("active");
   });
+  // add active class
   if (backgroundLocalItem === "true") {
     document.querySelector(".random-back .yes").classList.add("active");
   } else {
@@ -90,6 +106,7 @@ document.querySelector(".reset-option").onclick = function () {
 
 // --------------------- Landing Page ---------------------
 const landingPage = document.querySelector(".landing-page");
+// get array of images
 let imgArray = [];
 for (let i = 0; i < 5; i++) {
   imgArray.push(`./images/landing${i + 1}.jpg`);
@@ -121,6 +138,7 @@ window.onscroll = () => {
   }
 };
 // Our Skills Section --------------------- ---------------------
+
 // --------------------- Our Gallery Section ---------------------
 const galleryImages = document.querySelectorAll(".images-box img");
 galleryImages.forEach((img) => {
@@ -166,11 +184,13 @@ galleryImages.forEach((img) => {
 });
 // close button
 document.addEventListener("click", (e) => {
+  // if popup opned remove it with overlay
   if (e.target.className == "close-button") {
     e.target.parentNode.remove();
     document.querySelector(".popup-overllay").remove();
   }
 });
+
 // Our Gallery Section --------------------- ---------------------
 // --------------------- Navigation Bullets & Navbar ---------------------
 const bullets = document.querySelectorAll(".nav-bullets .bullet");
@@ -201,9 +221,11 @@ if (bulletLocalItem !== null) {
 
   bulletsContainer.style.display = bulletLocalItem;
   if (bulletLocalItem === "block") {
+    // bulletsContainer.style.display = "block";
     document.querySelector(".navigation-bullets .yes").classList.add("active");
   } else {
     document.querySelector(".navigation-bullets .no").classList.add("active");
+    // localStorage.setItem("bulletOption", "none");
   }
 }
 navigationBullets.forEach((span) => {
@@ -219,11 +241,14 @@ navigationBullets.forEach((span) => {
   });
 });
 // Navigation Bullets --------------------- ---------------------
+
 // --------------------- Create Handle State Active Function ---------------------
 function HandleActivStat(evnt) {
+  // remove active class from all childrens:
   evnt.target.parentElement.querySelectorAll(".active").forEach((elem) => {
     elem.classList.remove("active");
   });
+  // add active class on self:
   evnt.target.classList.add("active");
 }
 
@@ -239,6 +264,7 @@ togglebtn.onclick = function (e) {
   this.classList.toggle("menu-active");
   tlinks.classList.toggle("open");
 };
+
 // click outside toggle-menu
 document.addEventListener("click", (e) => {
   if (e.target != togglebtn && e.target != tlinks) {
